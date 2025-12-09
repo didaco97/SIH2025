@@ -12,14 +12,14 @@ interface ClaimCardProps {
 
 const statusConfig = {
   pending: { label: "Pending", class: "status-pending" },
-  waiting: { label: "Status", class: "status-waiting" },
+  waiting: { label: "Under Review", class: "status-waiting" },
   approved: { label: "Approved", class: "status-approved" },
   rejected: { label: "Rejected", class: "status-rejected" },
 };
 
 export function ClaimCard({ title, status, claimId, amount, icon }: ClaimCardProps) {
   const config = statusConfig[status];
-  
+
   return (
     <div className="stat-card">
       <div className="flex items-center justify-between mb-3">

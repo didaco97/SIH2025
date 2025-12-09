@@ -1,3 +1,5 @@
+"use client";
+
 import { OfficerSidebar } from "@/components/officer/OfficerSidebar";
 import { Bell, User, Shield, Globe, BellRing, Palette, Database, Key, Save, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,7 +14,7 @@ export default function OfficerSettings() {
   return (
     <div className="flex min-h-screen bg-background">
       <OfficerSidebar />
-      
+
       <main className="flex-1 p-6 overflow-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -20,7 +22,7 @@ export default function OfficerSettings() {
             <h1 className="text-3xl font-bold text-foreground font-display">Settings</h1>
             <p className="text-muted-foreground mt-1">Manage your account and application preferences</p>
           </div>
-          
+
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="icon" className="relative">
               <Bell className="w-5 h-5 text-muted-foreground" />
@@ -51,7 +53,7 @@ export default function OfficerSettings() {
           <TabsContent value="profile">
             <div className="bg-card rounded-2xl shadow-card p-6">
               <h3 className="text-lg font-semibold text-foreground font-display mb-6">Profile Information</h3>
-              
+
               <div className="flex items-start gap-6 mb-6">
                 <div className="w-24 h-24 rounded-2xl bg-secondary flex items-center justify-center">
                   <User className="w-12 h-12 text-muted-foreground" />
@@ -61,7 +63,7 @@ export default function OfficerSettings() {
                   <p className="text-xs text-muted-foreground">JPG, PNG or GIF. Max size 2MB.</p>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="fullName">Full Name</Label>
@@ -113,9 +115,9 @@ export default function OfficerSettings() {
                   </Select>
                 </div>
               </div>
-              
+
               <Separator className="my-6" />
-              
+
               <div className="flex justify-end">
                 <Button className="gap-2 gradient-primary text-primary-foreground">
                   <Save className="w-4 h-4" /> Save Changes
@@ -128,7 +130,7 @@ export default function OfficerSettings() {
           <TabsContent value="notifications">
             <div className="bg-card rounded-2xl shadow-card p-6">
               <h3 className="text-lg font-semibold text-foreground font-display mb-6">Notification Preferences</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -177,7 +179,7 @@ export default function OfficerSettings() {
           <TabsContent value="display">
             <div className="bg-card rounded-2xl shadow-card p-6">
               <h3 className="text-lg font-semibold text-foreground font-display mb-6">Display Settings</h3>
-              
+
               <div className="space-y-6">
                 <div className="space-y-2">
                   <Label>Language</Label>
@@ -193,9 +195,9 @@ export default function OfficerSettings() {
                     </SelectContent>
                   </Select>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div className="space-y-2">
                   <Label>Default Map View</Label>
                   <Select defaultValue="satellite">
@@ -209,9 +211,9 @@ export default function OfficerSettings() {
                     </SelectContent>
                   </Select>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div className="space-y-2">
                   <Label>Date Format</Label>
                   <Select defaultValue="dd-mm-yyyy">
@@ -225,9 +227,9 @@ export default function OfficerSettings() {
                     </SelectContent>
                   </Select>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-medium text-foreground">Compact View</p>
@@ -243,7 +245,7 @@ export default function OfficerSettings() {
           <TabsContent value="security">
             <div className="bg-card rounded-2xl shadow-card p-6">
               <h3 className="text-lg font-semibold text-foreground font-display mb-6">Security Settings</h3>
-              
+
               <div className="space-y-6">
                 <div className="p-4 bg-secondary rounded-xl">
                   <div className="flex items-center gap-3 mb-3">
@@ -257,9 +259,9 @@ export default function OfficerSettings() {
                   </div>
                   <Button className="mt-4" variant="outline" size="sm">Update Password</Button>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-medium text-foreground">Two-Factor Authentication</p>
@@ -267,9 +269,9 @@ export default function OfficerSettings() {
                   </div>
                   <Switch />
                 </div>
-                
+
                 <Separator />
-                
+
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-medium text-foreground">Session Timeout</p>
@@ -287,9 +289,9 @@ export default function OfficerSettings() {
                     </SelectContent>
                   </Select>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div>
                   <p className="font-medium text-foreground mb-2">Recent Login Activity</p>
                   <div className="space-y-2 text-sm">

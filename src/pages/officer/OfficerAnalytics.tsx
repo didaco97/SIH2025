@@ -1,3 +1,5 @@
+"use client";
+
 import { OfficerSidebar } from "@/components/officer/OfficerSidebar";
 import { Bell, User, TrendingUp, TrendingDown, Droplets, Leaf, CloudRain, Thermometer } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -53,7 +55,7 @@ export default function OfficerAnalytics() {
   return (
     <div className="flex min-h-screen bg-background">
       <OfficerSidebar />
-      
+
       <main className="flex-1 p-6 overflow-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -61,7 +63,7 @@ export default function OfficerAnalytics() {
             <h1 className="text-3xl font-bold text-foreground font-display">Analytics</h1>
             <p className="text-muted-foreground mt-1">Comprehensive agricultural data insights</p>
           </div>
-          
+
           <div className="flex items-center gap-3">
             <Select defaultValue="2023">
               <SelectTrigger className="w-[120px]">
@@ -135,19 +137,19 @@ export default function OfficerAnalytics() {
               <AreaChart data={ndviData}>
                 <defs>
                   <linearGradient id="ndviGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(142, 60%, 45%)" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="hsl(142, 60%, 45%)" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="hsl(142, 60%, 45%)" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="hsl(142, 60%, 45%)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(120, 15%, 88%)" />
                 <XAxis dataKey="month" tick={{ fontSize: 12 }} stroke="hsl(150, 10%, 45%)" />
                 <YAxis domain={[0, 1]} tick={{ fontSize: 12 }} stroke="hsl(150, 10%, 45%)" />
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: 'hsl(0, 0%, 100%)', 
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: 'hsl(0, 0%, 100%)',
                     border: '1px solid hsl(120, 15%, 88%)',
                     borderRadius: '8px'
-                  }} 
+                  }}
                 />
                 <Area type="monotone" dataKey="value" stroke="hsl(142, 60%, 45%)" fill="url(#ndviGradient)" strokeWidth={2} />
               </AreaChart>
@@ -162,12 +164,12 @@ export default function OfficerAnalytics() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(120, 15%, 88%)" />
                 <XAxis dataKey="month" tick={{ fontSize: 12 }} stroke="hsl(150, 10%, 45%)" />
                 <YAxis tick={{ fontSize: 12 }} stroke="hsl(150, 10%, 45%)" />
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: 'hsl(0, 0%, 100%)', 
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: 'hsl(0, 0%, 100%)',
                     border: '1px solid hsl(120, 15%, 88%)',
                     borderRadius: '8px'
-                  }} 
+                  }}
                 />
                 <Bar dataKey="rainfall" fill="hsl(200, 70%, 50%)" radius={[4, 4, 0, 0]} />
               </BarChart>
@@ -216,12 +218,12 @@ export default function OfficerAnalytics() {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(120, 15%, 88%)" />
                 <XAxis dataKey="week" tick={{ fontSize: 12 }} stroke="hsl(150, 10%, 45%)" />
                 <YAxis domain={[40, 100]} tick={{ fontSize: 12 }} stroke="hsl(150, 10%, 45%)" />
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: 'hsl(0, 0%, 100%)', 
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: 'hsl(0, 0%, 100%)',
                     border: '1px solid hsl(120, 15%, 88%)',
                     borderRadius: '8px'
-                  }} 
+                  }}
                 />
                 <Line type="monotone" dataKey="zone1" stroke="hsl(142, 60%, 45%)" strokeWidth={2} dot={{ fill: 'hsl(142, 60%, 45%)' }} name="Zone 1" />
                 <Line type="monotone" dataKey="zone2" stroke="hsl(45, 90%, 55%)" strokeWidth={2} dot={{ fill: 'hsl(45, 90%, 55%)' }} name="Zone 2" />

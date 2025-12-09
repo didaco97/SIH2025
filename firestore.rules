@@ -1,0 +1,59 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper to check if user is accessing their own data
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Helper to check if user has officer role
+    // Note: In a real app, you'd check a custom claim or a user document.
+    // For now, checking if the document implies officer role or simplifying to authenticated for demo if needed.
+    // Better: Read the user's role from the 'users' collection.
+    function isOfficer() {
+      return isAuthenticated() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'officer';
+    }
+
+    // --- Users Collection ---
+    match /users/{userId} {
+      allow read: if isAuthenticated(); // Officers need to read farmers, farmers need to read themselves
+      allow write: if isOwner(userId) || isOfficer(); // Users edit self, officers might edit others?
+    }
+
+    // --- Farms Collection ---
+    match /farms/{farmId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isOfficer());
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // --- Claims Collection ---
+    match /claims/{claimId} {
+      // Officers can read all claims. Farmers can read their own.
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isOfficer());
+      
+      // Farmers can create claims for themselves.
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      
+      // Farmers can update own claims (e.g. if pending). Officers can update any (for processing).
+      allow update: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid || isOfficer()
+      );
+      
+      allow delete: if isOwner(resource.data.userId); // Only owner can delete
+    }
+
+    // --- Documents Collection ---
+    match /documents/{docId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isOfficer());
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+  }
+}

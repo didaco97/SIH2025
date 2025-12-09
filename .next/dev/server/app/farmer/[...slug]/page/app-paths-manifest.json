@@ -1,0 +1,3 @@
+{
+  "/farmer/[...slug]/page": "app/farmer/[...slug]/page.js"
+}

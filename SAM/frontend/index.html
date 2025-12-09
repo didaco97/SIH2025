@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM Farm Segmentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxjUs4SYfau1jdaywmkgI17ctCs5adFsI&callback=initMap&loading=async"
+        async defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Panel: Map -->
+        <div class="map-panel">
+            <div class="panel-header">
+                <h2>🗺️ Select Farm Location</h2>
+                <p>Click on a farm to segment it</p>
+            </div>
+            <div id="map"></div>
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span>Processing Segmentation...</span>
+            </div>
+        </div>
+
+        <!-- Right Panels -->
+        <div class="info-panels">
+            <!-- Segmented View -->
+            <div class="segment-panel">
+                <div class="panel-header">
+                    <h2>🔷 Segmented View</h2>
+                </div>
+                <div class="segment-content">
+                    <svg id="polygon-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                        <text x="50" y="50" text-anchor="middle" fill="#666">No segmentation selected</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Details Panel -->
+            <div class="details-panel">
+                <div class="panel-header">
+                    <h2>📊 Details</h2>
+                </div>
+                <div class="details-content">
+                    <div class="detail-item">
+                        <label>AREA</label>
+                        <div id="area-value" class="area-value">--</div>
+                        <div id="area-acres" class="area-sub">--</div>
+                    </div>
+                    <div class="detail-item">
+                        <label>COORDINATES (GeoJSON)</label>
+                        <pre id="coordinates">Select a farm on the map to view details.</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
