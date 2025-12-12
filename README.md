@@ -2,7 +2,7 @@
 
 # 🌾 KrishiSense: YES-TECH Agri Platform
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Farm-Level+Precision+Agriculture;AI-Powered+Insurance+Settlement;SIH+2025+Grand+Finale+Winner+🏆" alt="Typing SVG" />
+### 🚜 Farm-Level Precision Agriculture & Insurance Settlement
 
 <br/>
 
