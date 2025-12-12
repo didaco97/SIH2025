@@ -60,14 +60,14 @@
 
 🏆 *Grand Finale Winners*
 
-| Name | Role | Contribution |
-|:--:|:--:|:--|
-| **Darshan Gawade** | Team Lead & Full Stack Developer | System Architecture, Frontend, Backend APIs |
-| **Soham Patil** | ML Engineer | Yield Prediction Models, Ensemble Training |
-| **Akanksha Thorat** | Frontend Developer | UI/UX, Dashboard Design |
-| **Rutuja Khairnar** | Data Scientist | Data Pipelines, Feature Engineering |
-| **Prasad Jadhav** | Backend Developer | SAM Integration, API Server |
-| **Supriya Gawade** | Research & Documentation | PMFBY Integration, Testing |
+| Name | Role | Contact |
+|:--|:--:|:--|
+| **Dhiraj Sachin Dahale** | 👑 Team Leader | dhirajdahale96@gmail.com |
+| **Parag Hemraj Patil** | Team Member | patilparag2528@gmail.com |
+| **Gauri Balasaheb Chature** | Team Member | gaurichature@gmail.com |
+| **Gayatri Sandip Nawale** | Team Member | nawalegayatri7@gmail.com |
+| **Isha Singh Rajput** | Team Member | isha.rsingh.in@gmail.com |
+| **Chaitanya Pravin Thorat** | Team Member | chaitanyathorat2003@gmail.com |
 
 </div>
 
