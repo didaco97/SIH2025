@@ -1,0 +1,12 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/pages/officer/OfficerAnalytics.js")
+R.c("server/chunks/ssr/[root-of-the-server]__5b0800b7._.js")
+R.c("server/chunks/ssr/node_modules_d5d5ca3d._.js")
+R.c("server/chunks/ssr/_9bd88224._.js")
+R.c("server/chunks/ssr/node_modules_next_8a32dfb6._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__e525af68._.js")
+R.c("server/chunks/ssr/node_modules_dec7e350._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__29231b30._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1e9c4974._.js")
+R.c("server/chunks/ssr/node_modules_next_f71b9665._.js")
+R.m(304575)
+module.exports=R.m(304575).exports

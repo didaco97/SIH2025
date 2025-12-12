@@ -1,0 +1,20 @@
+{
+  "/Index": "pages/Index.js",
+  "/NotFound": "pages/NotFound.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/farmer/Analytics": "pages/farmer/Analytics.js",
+  "/farmer/Claims": "pages/farmer/Claims.js",
+  "/farmer/FarmerDashboard": "pages/farmer/FarmerDashboard.js",
+  "/farmer/FarmerFileClaim": "pages/farmer/FarmerFileClaim.js",
+  "/farmer/Settings": "pages/farmer/Settings.js",
+  "/officer/OfficerAnalytics": "pages/officer/OfficerAnalytics.js",
+  "/officer/OfficerApprovals": "pages/officer/OfficerApprovals.js",
+  "/officer/OfficerClaimAnalysis": "pages/officer/OfficerClaimAnalysis.js",
+  "/officer/OfficerClaimsMonitoring": "pages/officer/OfficerClaimsMonitoring.js",
+  "/officer/OfficerDashboard": "pages/officer/OfficerDashboard.js",
+  "/officer/OfficerFileClaim": "pages/officer/OfficerFileClaim.js",
+  "/officer/OfficerSettings": "pages/officer/OfficerSettings.js",
+  "/officer/OfficerYieldPredict": "pages/officer/OfficerYieldPredict.js"
+}

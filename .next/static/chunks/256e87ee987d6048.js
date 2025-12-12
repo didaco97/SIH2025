@@ -1,0 +1,16 @@
+__turbopack_load_page_chunks__("/farmer/FarmerFileClaim", [
+  "static/chunks/eca70c255c6e98e7.js",
+  "static/chunks/448621215350f73a.js",
+  "static/chunks/a67cd97f284485bc.js",
+  "static/chunks/29f7aca15a1f9306.js",
+  "static/chunks/f484830c491502aa.js",
+  "static/chunks/1e31df12ecc7a832.js",
+  "static/chunks/9f1f53728e3fae01.js",
+  "static/chunks/154a48d4f06b43e6.js",
+  "static/chunks/270c8a78fcf4af3f.js",
+  "static/chunks/b80a9611f1940d88.js",
+  "static/chunks/c8b6e23f87b9bd4c.js",
+  "static/chunks/01b70732d123dd6d.js",
+  "static/chunks/515b068d3b7ff98e.js",
+  "static/chunks/turbopack-7c74b6d0e239e2ad.js"
+])

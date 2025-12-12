@@ -1,0 +1,11 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/pages/officer/OfficerApprovals.js")
+R.c("server/chunks/ssr/[root-of-the-server]__432f07cf._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__da66bbdd._.js")
+R.c("server/chunks/ssr/node_modules_next_8a32dfb6._.js")
+R.c("server/chunks/ssr/node_modules_dec7e350._.js")
+R.c("server/chunks/ssr/_1f23df96._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__29231b30._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1e9c4974._.js")
+R.c("server/chunks/ssr/node_modules_next_f71b9665._.js")
+R.m(920468)
+module.exports=R.m(920468).exports

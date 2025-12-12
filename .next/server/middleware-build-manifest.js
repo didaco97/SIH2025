@@ -1,0 +1,232 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/Index": [
+      "static/chunks/a9140e3b55c9ccd8.js",
+      "static/chunks/93af7a564ae07683.js",
+      "static/chunks/30a4848e1316c022.js",
+      "static/chunks/1d4a4e823556ec7d.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/01b70732d123dd6d.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/turbopack-39673f6d42c03c0e.js"
+    ],
+    "/NotFound": [
+      "static/chunks/f6c6665e61dc71a4.js",
+      "static/chunks/622b23a37db25168.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/turbopack-3e89d2d77348f9e3.js"
+    ],
+    "/_app": [
+      "static/chunks/d5e0867f754ac8de.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/turbopack-61bd2b7ac4182078.js"
+    ],
+    "/_error": [
+      "static/chunks/ff5f18e50cd801ec.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/turbopack-31b332b04d551b95.js"
+    ],
+    "/farmer/Analytics": [
+      "static/chunks/8e172a06222ce271.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/7bdab7eaae56d88e.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/turbopack-5cc3055b5b1052fe.js"
+    ],
+    "/farmer/Claims": [
+      "static/chunks/a955470dcd2a5fcc.js",
+      "static/chunks/7bed7ee1570da345.js",
+      "static/chunks/c122075f5843baba.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/cbed550169115ec6.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/7bdab7eaae56d88e.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/a13d9a75eab5af4b.js",
+      "static/chunks/turbopack-cdc2bc1f70351c13.js"
+    ],
+    "/farmer/FarmerDashboard": [
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/0416cda387599c88.js",
+      "static/chunks/fb728882ca5f7701.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/01b70732d123dd6d.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/turbopack-0e9c96d5bdb66b56.js"
+    ],
+    "/farmer/FarmerFileClaim": [
+      "static/chunks/eca70c255c6e98e7.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/a67cd97f284485bc.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/1e31df12ecc7a832.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/154a48d4f06b43e6.js",
+      "static/chunks/270c8a78fcf4af3f.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/01b70732d123dd6d.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/turbopack-7c74b6d0e239e2ad.js"
+    ],
+    "/farmer/Settings": [
+      "static/chunks/0e4baa23266c82db.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/turbopack-b775d070b2ac3764.js"
+    ],
+    "/officer/OfficerAnalytics": [
+      "static/chunks/c122075f5843baba.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/7bdab7eaae56d88e.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/720641a8ba65a20e.js",
+      "static/chunks/turbopack-a0283d38fc645773.js"
+    ],
+    "/officer/OfficerApprovals": [
+      "static/chunks/1bedcd59469c643e.js",
+      "static/chunks/6841c72bc6829796.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/7f3c156a5ffb3004.js",
+      "static/chunks/7b27df3f13266ac8.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/cbed550169115ec6.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/0b57a049bef210ef.js",
+      "static/chunks/turbopack-d70bbff8dc22dff7.js"
+    ],
+    "/officer/OfficerClaimAnalysis": [
+      "static/chunks/bee1f10e9e3d1b88.js",
+      "static/chunks/6841c72bc6829796.js",
+      "static/chunks/3affd8fdfb7df9b7.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/cbed550169115ec6.js",
+      "static/chunks/56a42ef6565012cc.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/turbopack-ce2d5c51d1cc44d3.js"
+    ],
+    "/officer/OfficerClaimsMonitoring": [
+      "static/chunks/852153133021caa2.js",
+      "static/chunks/c122075f5843baba.js",
+      "static/chunks/bee1f10e9e3d1b88.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/7bed7ee1570da345.js",
+      "static/chunks/cbed550169115ec6.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/7bdab7eaae56d88e.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/b0723391ca170a30.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/turbopack-6f2c4ecfc7c5f819.js"
+    ],
+    "/officer/OfficerDashboard": [
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/e2e47840ad474bbd.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/8f4fefb85cbea244.js",
+      "static/chunks/turbopack-aae1808d8aeac492.js"
+    ],
+    "/officer/OfficerFileClaim": [
+      "static/chunks/f825c9591f0064a6.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/a67cd97f284485bc.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/1e31df12ecc7a832.js",
+      "static/chunks/270c8a78fcf4af3f.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/01b70732d123dd6d.js",
+      "static/chunks/d86befb1f8105223.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/154a48d4f06b43e6.js",
+      "static/chunks/turbopack-88907da8c9bc4624.js"
+    ],
+    "/officer/OfficerSettings": [
+      "static/chunks/fe37216f1d9522c7.js",
+      "static/chunks/448621215350f73a.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/60a7af3e60fe53b4.js",
+      "static/chunks/515b068d3b7ff98e.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/c8b6e23f87b9bd4c.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/turbopack-3078072d263cb632.js"
+    ],
+    "/officer/OfficerYieldPredict": [
+      "static/chunks/275c954081b39c0e.js",
+      "static/chunks/2fa06c924ad258ae.js",
+      "static/chunks/29f7aca15a1f9306.js",
+      "static/chunks/56a42ef6565012cc.js",
+      "static/chunks/f484830c491502aa.js",
+      "static/chunks/9f1f53728e3fae01.js",
+      "static/chunks/b80a9611f1940d88.js",
+      "static/chunks/cbed550169115ec6.js",
+      "static/chunks/cd1b411d8006a714.js",
+      "static/chunks/4f30149594811f74.js",
+      "static/chunks/622b23a37db25168.js",
+      "static/chunks/turbopack-990c1b67d35d5fa6.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/a6dad97d9634a72d.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/996cf9413d4c5d34.js",
+    "static/chunks/1cbe0d561476222c.js",
+    "static/chunks/8fca6c4abeeb7924.js",
+    "static/chunks/08dcfc3b15383cd6.js",
+    "static/chunks/turbopack-d0acb299294ebe59.js"
+  ]
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js"
+];

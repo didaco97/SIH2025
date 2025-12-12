@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, setDoc, doc, deleteDoc } from "firebase/firestore/lite";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBMCIcfRVb5kW5yruvXyOi54G26Wz4Hyhk",
-    authDomain: "krishisense-480507.firebaseapp.com",
-    projectId: "krishisense-480507",
-    storageBucket: "krishisense-480507.firebasestorage.app",
-    messagingSenderId: "789016695542",
-    appId: "1:789016695542:web:e272e7a68dc336f1c792d7",
-    measurementId: "G-HDD3M085YQ"
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID",
+    measurementId: "YOUR_MEASUREMENT_ID"
 };
 
 const app = initializeApp(firebaseConfig);

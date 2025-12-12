@@ -14,14 +14,20 @@ export default function CleanupPage() {
 
     const clearClaims = async () => {
         setLoading(true);
+        if (!db) {
+            toast.error("Database not initialized");
+            setLoading(false);
+            return;
+        }
+        const firestore = db;
         try {
-            const claimsRef = collection(db, 'claims');
+            const claimsRef = collection(firestore, 'claims');
             const snapshot = await getDocs(claimsRef);
 
             console.log(`Deleting ${snapshot.docs.length} claims...`);
 
             const deletePromises = snapshot.docs.map(document =>
-                deleteDoc(doc(db, 'claims', document.id))
+                deleteDoc(doc(firestore, 'claims', document.id))
             );
 
             await Promise.all(deletePromises);
@@ -37,14 +43,20 @@ export default function CleanupPage() {
 
     const clearFarms = async () => {
         setLoading(true);
+        if (!db) {
+            toast.error("Database not initialized");
+            setLoading(false);
+            return;
+        }
+        const firestore = db;
         try {
-            const farmsRef = collection(db, 'segmented_farms');
+            const farmsRef = collection(firestore, 'segmented_farms');
             const snapshot = await getDocs(farmsRef);
 
             console.log(`Deleting ${snapshot.docs.length} farms...`);
 
             const deletePromises = snapshot.docs.map(document =>
-                deleteDoc(doc(db, 'segmented_farms', document.id))
+                deleteDoc(doc(firestore, 'segmented_farms', document.id))
             );
 
             await Promise.all(deletePromises);
@@ -60,20 +72,26 @@ export default function CleanupPage() {
 
     const clearAll = async () => {
         setLoading(true);
+        if (!db) {
+            toast.error("Database not initialized");
+            setLoading(false);
+            return;
+        }
+        const firestore = db;
         try {
             // Delete claims
-            const claimsRef = collection(db, 'claims');
+            const claimsRef = collection(firestore, 'claims');
             const claimsSnapshot = await getDocs(claimsRef);
             const claimsPromises = claimsSnapshot.docs.map(d =>
-                deleteDoc(doc(db, 'claims', d.id))
+                deleteDoc(doc(firestore, 'claims', d.id))
             );
             await Promise.all(claimsPromises);
 
             // Delete farms
-            const farmsRef = collection(db, 'segmented_farms');
+            const farmsRef = collection(firestore, 'segmented_farms');
             const farmsSnapshot = await getDocs(farmsRef);
             const farmsPromises = farmsSnapshot.docs.map(d =>
-                deleteDoc(doc(db, 'segmented_farms', d.id))
+                deleteDoc(doc(firestore, 'segmented_farms', d.id))
             );
             await Promise.all(farmsPromises);
 

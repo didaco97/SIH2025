@@ -32,7 +32,7 @@ print("✓ Setup complete\n")
 # ============================================================================
 
 # ⚠️ UPDATE THIS WITH YOUR API URL
-API_URL = 'http://192.168.1.100:5000'  # Change to your API URL
+API_URL = 'http://localhost:5000'  # Change to your API URL
 
 print(f"API URL: {API_URL}\n")
 print("="*80)

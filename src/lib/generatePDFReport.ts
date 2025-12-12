@@ -7,8 +7,9 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
 import { uploadReportPDF } from './storage';
-import { saveReport, ReportData as FirestoreReportData } from './firestore';
+import { saveReport, ReportData as FirestoreReportData, updateClaimBlockchainInfo } from './firestore';
 import { Timestamp } from 'firebase/firestore';
+import { storeHashOnChain, isMetaMaskInstalled, getCurrentAddress } from './web3';
 
 interface ReportData {
     claim: {
@@ -404,8 +405,62 @@ export async function generatePDFReport(
                 fileName: cleanFileName
             };
 
-            await saveReport(reportMetadata);
-            console.log('Report saved to Firestore successfully');
+            const { reportId, blockchainHash } = await saveReport(reportMetadata);
+            console.log('Report saved to Firestore successfully. Report ID:', reportId);
+
+            // Log and alert about blockchain hash
+            if (blockchainHash && claim.id) {
+                console.log('🔐 Blockchain Hash Generated:', blockchainHash);
+
+                // Check if MetaMask is available and try to store on-chain
+                if (isMetaMaskInstalled()) {
+                    const walletAddress = await getCurrentAddress();
+
+                    if (walletAddress) {
+                        // User has MetaMask connected - store on blockchain
+                        const confirmed = confirm(
+                            `✅ Report Generated!\n\n` +
+                            `🔐 Hash: ${blockchainHash.substring(0, 16)}...\n\n` +
+                            `Would you like to store this hash on the blockchain?\n` +
+                            `(This will create a permanent, verifiable record on Polygon)`
+                        );
+
+                        if (confirmed) {
+                            const txResult = await storeHashOnChain(blockchainHash, claim.id);
+
+                            if (txResult.success && txResult.txHash && txResult.blockExplorerUrl) {
+                                // Save transaction info to Firestore
+                                await updateClaimBlockchainInfo(claim.id, txResult.txHash, txResult.blockExplorerUrl);
+
+                                alert(
+                                    `✅ BLOCKCHAIN VERIFIED!\n\n` +
+                                    `Transaction Hash:\n${txResult.txHash}\n\n` +
+                                    `View on Block Explorer:\n${txResult.blockExplorerUrl}\n\n` +
+                                    `This transaction is permanently recorded on the blockchain.`
+                                );
+                                console.log('🔗 Blockchain TX:', txResult.txHash);
+                                console.log('🔗 Explorer:', txResult.blockExplorerUrl);
+                            } else {
+                                alert(`⚠️ Blockchain storage failed:\n${txResult.error}\n\nThe hash is still saved locally in Firestore.`);
+                            }
+                        } else {
+                            alert(`✅ Report Saved!\n\n🔐 Local Hash: ${blockchainHash.substring(0, 32)}...\n\n(Blockchain verification skipped)`);
+                        }
+                    } else {
+                        alert(
+                            `✅ Report Saved!\n\n` +
+                            `🔐 Local Hash: ${blockchainHash.substring(0, 32)}...\n\n` +
+                            `💡 Connect MetaMask to enable blockchain verification.`
+                        );
+                    }
+                } else {
+                    alert(
+                        `✅ Report Saved!\n\n` +
+                        `🔐 Local Hash: ${blockchainHash.substring(0, 32)}...\n\n` +
+                        `📥 Install MetaMask to enable blockchain verification.`
+                    );
+                }
+            }
         } catch (error) {
             console.error('Error uploading report to Firestore:', error);
             // Don't throw - we still want to allow the user to download the local copy

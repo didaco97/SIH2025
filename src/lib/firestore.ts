@@ -180,7 +180,11 @@ export interface ClaimData {
     officerNotes?: string;
     processedBy?: string;
     processedAt?: Timestamp;
-    blockchainHash?: string;
+
+    // Blockchain Verification
+    blockchainHash?: string;          // SHA-256 hash of report
+    blockchainTxHash?: string;        // On-chain transaction hash
+    blockchainExplorerUrl?: string;   // Link to block explorer
 
     createdAt?: Timestamp;
     updatedAt?: Timestamp;
@@ -228,6 +232,16 @@ export async function getUserClaims(userId: string): Promise<ClaimData[]> {
     return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as ClaimData));
 }
 
+export async function getClaimsByFarmerId(farmerId: string): Promise<ClaimData[]> {
+    const claimsQuery = query(
+        collection(getDb(), 'claims'),
+        where('farmerId', '==', farmerId),
+        orderBy('createdAt', 'desc')
+    );
+    const snapshot = await getDocs(claimsQuery);
+    return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as ClaimData));
+}
+
 export async function getFarmClaims(farmId: string): Promise<ClaimData[]> {
     const claimsQuery = query(
         collection(getDb(), 'claims'),
@@ -268,6 +282,18 @@ export async function updateClaimStatus(
         officerNotes,
         processedBy,
         processedAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
+    });
+}
+
+export async function updateClaimBlockchainInfo(
+    claimId: string,
+    txHash: string,
+    explorerUrl: string
+): Promise<void> {
+    await updateDoc(doc(getDb(), 'claims', claimId), {
+        blockchainTxHash: txHash,
+        blockchainExplorerUrl: explorerUrl,
         updatedAt: serverTimestamp(),
     });
 }
@@ -428,18 +454,19 @@ export interface ReportData {
     createdAt?: Timestamp;
 }
 
-export async function saveReport(data: Omit<ReportData, 'id' | 'createdAt'>): Promise<string> {
+export async function saveReport(data: Omit<ReportData, 'id' | 'createdAt'>): Promise<{ reportId: string; blockchainHash?: string }> {
     const reportRef = await addDoc(collection(getDb(), 'reports'), {
         ...data,
         createdAt: serverTimestamp(),
     });
 
-    // Also update the claim with the report reference and set status to 'waiting' (Under Review)
+    let blockHash: string | undefined;
+
     // Also update the claim with the report reference and set status to 'waiting' (Under Review)
     if (data.claimId) {
         // Generate blockchain hash from the report URL + Timestamp for uniqueness/integrity
         const hashInput = `${data.pdfUrl}-${Date.now()}`;
-        const blockHash = await generateBlockchainHash(hashInput);
+        blockHash = await generateBlockchainHash(hashInput);
 
         await updateDoc(doc(getDb(), 'claims', data.claimId), {
             reportId: reportRef.id,
@@ -451,7 +478,7 @@ export async function saveReport(data: Omit<ReportData, 'id' | 'createdAt'>): Pr
         });
     }
 
-    return reportRef.id;
+    return { reportId: reportRef.id, blockchainHash: blockHash };
 }
 
 export async function getClaimReports(claimId: string): Promise<ReportData[]> {

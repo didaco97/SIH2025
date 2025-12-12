@@ -1,0 +1,12 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/pages/farmer/FarmerFileClaim.js")
+R.c("server/chunks/ssr/[root-of-the-server]__4090f554._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__ad149757._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__11cb34f7._.js")
+R.c("server/chunks/ssr/node_modules_dec7e350._.js")
+R.c("server/chunks/ssr/_4acbd2d9._.js")
+R.c("server/chunks/ssr/node_modules_next_8a32dfb6._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__29231b30._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1e9c4974._.js")
+R.c("server/chunks/ssr/node_modules_next_f71b9665._.js")
+R.m(166827)
+module.exports=R.m(166827).exports
