@@ -2,7 +2,7 @@
 
 # 🌾 KrishiSense: YES-TECH Agri Platform
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:059669,100:10B981&height=200&section=header&text=KrishiSense&fontSize=80&animation=fadeIn&fontAlignY=35&desc=Farm-Level%20Precision%20Agriculture%20%26%20Insurance%20Settlement&descAlignY=55&descAlign=50&fontColor=ffffff" width="100%"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Farm-Level+Precision+Agriculture;AI-Powered+Insurance+Settlement;SIH+2025+Grand+Finale+Winner+🏆" alt="Typing SVG" />
 
 <br/>
 
@@ -565,9 +565,7 @@ GOOGLE_VISION_API_KEY=your_vision_ocr_key
 
 ---
 
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:059669,100:10B981&height=120&section=footer" width="100%"/>
+---
 
 **Made with ❤️ for Indian Agriculture by Team GRAVITON 🇮🇳**
 
