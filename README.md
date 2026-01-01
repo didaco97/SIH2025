@@ -1,5 +1,37 @@
 <div align="center">
 
+# 🏆 GRAND WINNER - SMART INDIA HACKATHON 2025 🏆
+### 🚀 Team GRAVITON | Problem Statement SIH25263
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <img src="Win.jpeg" alt="Winning Moment" style="border-radius: 10px; width: 100%;" />
+      <p><b>🎉 Our Winning Moment</b></p>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://www.youtube.com/watch?v=lgbmo4XwsXs">
+        <img src="https://img.youtube.com/vi/lgbmo4XwsXs/maxresdefault.jpg" alt="Watch Demo" style="border-radius: 10px; width: 100%;" />
+      </a>
+      <p><b>📺 Watch Project Demo</b></p>
+    </td>
+  </tr>
+</table>
+
+<h3>
+  <a href="https://drive.google.com/file/d/1qa_aSzNEf5aL8gOpo3IdEk0TWsnhqvMA/view?usp=sharing">📄 View Presentation (PPT)</a>
+  &nbsp; • &nbsp;
+  <a href="https://www.youtube.com/watch?v=lgbmo4XwsXs">🎥 Watch on YouTube</a>
+</h3>
+
+<br/>
+<hr/>
+<br/>
+
+</div>
+
+<div align="center">
+
 # 🌾 KrishiSense: YES-TECH Agri Platform
 
 ### 🚜 Farm-Level Precision Agriculture & Insurance Settlement
